@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Number Guessing</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="overlay">
+      <h1>Guess the right number!</h1>
+      <form action="check.html" method="get">
+        <!-- Add a (requierd) attribute to the input element -->
+        <!-- Then set a Minimum and Maximum -->
+        <label for="guess">Enter a number between 1-10:</label><br />
+        <input
+          id="guess"
+          name="guess"
+          type="number"
+          required
+          min="1"
+          max="10"
+        /><br />
+        <input id="submit" type="submit" value="Submit" />
+      </form>
+      <hr />
+      <!-- Checking Text Lenght -->
+      <!-- limit usernames to only letters and numbers (and not special characters like ! or @). -->
+      <h1>Sign Up</h1>
+      <p>Create an account:</p>
+      <form action="submission.html">
+        <label for="username">Username:</label><br />
+        <input
+          id="username"
+          name="username"
+          type="text"
+          required
+          minlength="3"
+          maxlength="15"
+          pattern="[a-zA-Z0-9]+"
+        /><br />
+        <label for="pw">Password:</label><br />
+        <input
+          id="pw"
+          name="pw"
+          type="text"
+          required
+          minlength="8"
+          maxlength="15"
+        /><br />
+        <input type="submit" value="Sbmit" />
+      </form>
+      <!-- We could also add a validation to check how the text was provided. For cases when we want user input to follow specific guidelines,
+      we use the pattern attribute and assign it a regular expression, or regex. Regular expressions are a sequence of characters that make up a search pattern. 
+      If the input matches the regex, the form can be submitted.
+      Let’s say we wanted to check for a valid credit card number (a 14 to 16 digit number). 
+      We could use the regex: [0-9]{14,16} which checks that the user provided only numbers and that they entered at least 14 digits and at most 16 digits. -->
+    </section>
+  </body>
+</html>
